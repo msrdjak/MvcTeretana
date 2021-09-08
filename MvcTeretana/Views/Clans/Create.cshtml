@@ -1,0 +1,63 @@
+﻿@model MvcTeretana.Models.Clan
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Clan</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Ime" class="control-label"></label>
+                <input asp-for="Ime" class="form-control" />
+                <span asp-validation-for="Ime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Prezime" class="control-label"></label>
+                <input asp-for="Prezime" class="form-control" />
+                <span asp-validation-for="Prezime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GodinaRodenja" class="control-label"></label>
+                <input asp-for="GodinaRodenja" class="form-control" />
+                <span asp-validation-for="GodinaRodenja" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Spol" class="control-label"></label>
+                <input asp-for="Spol" class="form-control" />
+                <span asp-validation-for="Spol" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RazinaClanarine" class="control-label"></label>
+                <input asp-for="RazinaClanarine" class="form-control" />
+                <span asp-validation-for="RazinaClanarine" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClanarinaVrijediDo" class="control-label"></label>
+                <input asp-for="ClanarinaVrijediDo" class="form-control" />
+                <span asp-validation-for="ClanarinaVrijediDo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VrstaTreninga" class="control-label"></label>
+                <input asp-for="VrstaTreninga" class="form-control" />
+                <span asp-validation-for="VrstaTreninga" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
